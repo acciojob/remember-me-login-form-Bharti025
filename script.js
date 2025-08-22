@@ -4,8 +4,17 @@ let user=document.getElementById("username");
 let password=document.getElementById("password");
 let checkbox=document.getElementById("checkbox");
 const loginbtn=document.getElementById("existing");
-loginbtn.style.display='none';
+
 let isLoggedIn="false";
+
+window.onload = function() {
+    isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    if (isLoggedIn) {
+        loginbtn.style.display = 'block';
+        user.value = localStorage.getItem("name"); // Pre-fill username
+    }
+};
+
 function check(){
 userValue=user.value;
 passwordValue=password.value;
@@ -25,7 +34,8 @@ if(isLoggedIn){
 loginbtn.style.display='block';
 }
 function exist(){
-	alert("Hello"+userValue);
+	 const userValue = localStorage.getItem("name");
+	alert("Hello "+userValue);
 }
 
 loginbtn.addEventListener("click",exist);
