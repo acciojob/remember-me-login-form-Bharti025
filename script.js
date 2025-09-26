@@ -20,6 +20,7 @@ userValue=user.value;
 passwordValue=password.value;
 	if(!checkbox.checked){
 		alert("Logged in as " + userValue);
+		isLoggedIn="false";
 	}
 	else{
 	isLoggedIn="true";
@@ -33,6 +34,7 @@ passwordValue=password.value;
 if(isLoggedIn){
 loginbtn.style.display='block';
 }
+
 function exist(){
 	 const userValue = localStorage.getItem("name");
 	alert("Hello "+userValue);
