@@ -4,7 +4,7 @@ let user=document.getElementById("username");
 let password=document.getElementById("password");
 let checkbox=document.getElementById("checkbox");
 const loginbtn=document.getElementById("existing");
-
+loginbtn.style.display="none";
 let isLoggedIn="false";
 
 window.onload = function() {
