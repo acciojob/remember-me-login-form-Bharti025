@@ -25,7 +25,7 @@ passwordValue=password.value;
 	isLoggedIn="true";
      alert("Logged in as " + userValue);
 	 localStorage.setItem("isLoggedIn",isLoggedIn);
-      localStorage.setItem("name",userValue);
+    localStorage.setItem("name",userValue);
 	localStorage.setItem("password",passwordValue);	
 	}
 }
